@@ -1,0 +1,49 @@
+#animbox img, #arrowback {
+	max-width: none !important;
+}
+div.entry.fix {
+	overflow: visible !important;
+}
+article.post {
+	overflow: visible !important;
+}
+#content {
+	overflow: visible !important;
+}
+
+#tallbox {
+	min-height: 1100px;
+/* 	max-width: 760px; */
+	position: relative;
+	margin: 0px;
+	}
+#animbox {
+	position: absolute;
+	overflow: hidden;
+	height: 1700px;
+	width: 1700px;
+	z-index: 998;
+}
+
+div.sprite {
+	position: absolute;
+	display: none;
+	overflow: visible;
+}
+div.sprite.multiframe {
+	overflow: hidden;
+}
+div.sprite img {
+	position: absolute;
+}
+div.smoke {
+	transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-o-transform-origin: top left;
+}
+#arrowback {
+	max-width: none !important;
+	z-index: 999;
+}
