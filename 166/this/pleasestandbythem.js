@@ -1,0 +1,8 @@
+function windowheight(){var myWidth=0,myHeight=0;if(typeof(window.innerWidth)=='number'){myWidth=window.innerWidth;myHeight=window.innerHeight;}else if(document.documentElement&&(document.documentElement.clientWidth||document.documentElement.clientHeight)){myWidth=document.documentElement.clientWidth;myHeight=document.documentElement.clientHeight;}else if(document.body&&(document.body.clientWidth||document.body.clientHeight)){myWidth=document.body.clientWidth;myHeight=document.body.clientHeight;}
+return myHeight;}
+jQuery(window).scroll(function(){var window_y=jQuery(window).scrollTop();var stairs_y=jQuery('#stairsbox').offset().top;var innerheight=windowheight();var d=(stairs_y-window_y)/320+0.40;if(d<-1.0){d=-1;}
+if(d>1.5){d=1.5;}
+function f(obj,pos1,pos2){jQuery(obj).css({top:pos1+(pos1-pos2)*d});}
+f("#step1",342,305);f("#step2",398,310);f("#step3",459,310);f("#step4",529,310);f("#step5",611,310);f("#step6",707,320);f("#step7",806,320);f("#motes1",-480,-535);f("#motes2",-400,-546);f("#motes3",-240,-539);f("#motes4",220,-289);}).scroll();function wiggles(){var d=new Date();var p=(d.getUTCSeconds()*1000+d.getUTCMilliseconds())/10000;function f(obj,zero,dev,offset){jQuery(obj).css({left:zero+dev*Math.sin(2*Math.PI*(p+offset))});}
+f("#step1",193,10,0);f("#step2",185,20,0.1);f("#step3",190,30,0.2);f("#step4",207,40,0.3);f("#step5",241,50,0.4);f("#step6",178,60,0.5);f("#step7",50,70,0.6);setTimeout(wiggles,50);}
+jQuery(wiggles);
