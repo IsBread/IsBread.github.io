@@ -41,8 +41,8 @@ function run(){seq[index].func(index,data);index++;if(index<seq.length){schedule
 schedule();}
 function reposition_animbox(){var tallbox_offset=jQuery("#tallbox").offset();var tallbox_position=jQuery("#tallbox").position();var window_width=jQuery(window).width();var left=-tallbox_offset.left-Math.floor((1700-window_width)/2);jQuery("#animbox").css({left:left,top:-tallbox_offset.top,width:window_width-left-tallbox_offset.left-1});jQuery("#tallbox").css({height:1700-tallbox_offset.top,"min-height":1700-tallbox_offset.top});}
 jQuery(window).bind('resize',reposition_animbox).trigger('resize');function doit(){jQuery("body,#wrapper,article.post").css({backgroundColor:"black"});set_sprite_sizes();jQuery("div.entry-container").after('<table style="float:right;background-color:#111;color:#333"><tr><td> \
-							<a style="color:#333" href="http://www.prequeladventure.com/2011/03/prequel-begin/"><b>New readers start here!</b></a><br/> \
-							<a style="color:#333" href="http://www.prequeladventure.com/category/archive/">Archive</a><br/> \
-							<a style="color:#333" href="index.html#comments">Comments</a> \
+							<a style="color:#333" href="http://www.prequeladventure.com/2011/03/prequel-begin/"><b>Начало истории здесь!</b></a><br/> \
+							<a style="color:#333" href="http://www.prequeladventure.com/category/archive/">Архив</a><br/> \
+							<a style="color:#333" href="index.html#comments">Комментарии</a> \
 						</td></tr></table>');run_sequence(seq1,{});}
 jQuery(doit);
